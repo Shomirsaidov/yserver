@@ -1,7 +1,8 @@
 const sql = require('mysql2')
 require('dotenv').config()
 
-const connection = sql.createConnection({
+const connection = sql.createPool({
+	connectionLimit: 5,
 	host: process.env.DB_HOST,
 	user: process.env.DB_USER,
 	database: process.env.DB_NAME,
