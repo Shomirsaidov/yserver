@@ -9,10 +9,10 @@ const connection = sql.createPool({
 	password: process.env.DB_PASSWORD
 })
 
-connection.connect((e) => {
+/*connection.connect((e) => {
 	if(e) console.warn(e)
 	else console.log('Connected to the database !')
-})
+})*/
 
 
 module.exports.connection = connection
